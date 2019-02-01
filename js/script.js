@@ -1,4 +1,6 @@
 // An array of quotes//
+//quotes mostly from authors//
+//last two quotes have citation and years added.//
 var quotes=[
 
 {
@@ -33,11 +35,10 @@ var quotes=[
       citation:"Kafka on the Shore",
 
 }
-
 ];
 
-
- /*** function getRandomQuote returns variable pickAQuote ***/
+ //  created function getRandomQuote to choose a random quote//
+ // returns pickAQuote so that it can be called on later//
 function getRandomQuote(array){
     var quoteNumber = Math.floor(Math.random()*(quotes.length));
     for(i= 0;i < array.length; i++){
@@ -46,14 +47,13 @@ function getRandomQuote(array){
     return pickAQuote;
   }
 
-/*** Create the function printQuote in order to print the quote ***/
+// Create the function printQuote in order to print the quote //
   function printQuote(){
     var answer = getRandomQuote(quotes);
     var message ="<p class = 'quote'>" + result.quote + "</p>";
     message += "<p class= 'source'>" + result.source;
     message += "<p class='citation>" + result.citation + "</span>";
-    message += "<span class= 'year'>" + result.year + "</span>"
-    message += "</p>";
+    message += "<span class= 'year'>" + result.year + "</span>"+ "</p>";
 
 document.getElementById('quote-box').innerHTML = message;
 
@@ -61,10 +61,5 @@ document.getElementById('quote-box').innerHTML = message;
 
 // calling the function so that it can start//
 printQuote();
-
-
-
-
-
 //printQuote function will be called//
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
