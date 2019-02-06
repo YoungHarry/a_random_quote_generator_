@@ -1,6 +1,6 @@
 // An array of quotes//
 //quotes mostly from authors//
-//last two quotes have citation and years added.//
+
 var quotes=[
 
 {
