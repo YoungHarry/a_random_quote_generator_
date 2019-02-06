@@ -4,19 +4,24 @@
 var quotes=[
 
 {
-        quote: "If you're going through hell, keep going.",
-        source: "Wintson Churchil",
+        quote: "It's no use going back to yesterday, because I was a different person then.",
+        source: "Lewis Carroll",
+        year:"1865",
+        citation:"Lewis Carroll"
 },
 
 {
-      quote: "The weak can never forgive, forgiveness is the attribute of the strong",
-      source: " Mahatma Ghandi"
+      quote: "Travel far enough, you'll meet yourself.",
+      source: "David Mitchell",
+      year:"2004",
+      citation:"Cloud Atlas"
 },
 
 {
-      quote: "Faith is taking the first step even when you can't see the whole staircase",
-      source: "Martin Luther King Jr.",
-
+      quote: "There is some good in this world, and it's worth fighting for.",
+      source: "J.R.R. Tolken",
+      year: "1954",
+      citation: "The Two Towers"
 },
 
 {
@@ -31,8 +36,8 @@ var quotes=[
 {
       quote: "Memories warm you up form the inside, but they also tear you apart",
       source: "Haruki Murakami",
-      year:"2002",
-      citation:"Kafka on the Shore",
+      year: "2002",
+      citation: "Kafka on the Shore",
 
 }
 ];
@@ -50,10 +55,11 @@ function getRandomQuote(array){
 // Create the function printQuote in order to print the quote //
   function printQuote(){
     var answer = getRandomQuote(quotes);
-    var message ="<p class = 'quote'>" + result.quote + "</p>";
-    message += "<p class= 'source'>" + result.source;
-    message += "<p class='citation>" + result.citation + "</span>";
-    message += "<span class= 'year'>" + result.year + "</span>"+ "</p>";
+    var message = "<span class = ' quote'>" + answer.quote + "</span>";
+        message += "<span class= ' source'>" + answer.source+"</span>";
+          message += "<span class=' citation'>" + answer.citation + "</span>";
+          message += "<span class= ' year'>" + answer.year + "</span>";
+
 
 document.getElementById('quote-box').innerHTML = message;
 
